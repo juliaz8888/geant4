@@ -1,0 +1,40 @@
+/process/verbose 0
+/process/em/deexcitation region true true true
+/process/em/fluo true
+/process/em/auger true
+/process/em/pixe true
+/process/em/deexcitationIgnoreCut true
+/process/em/pixeXSmodel ECPSSR_FormFactor
+/process/em/pixeElecXSmodel Penelope
+
+#/gun/particle gamma 
+#/gun/energy 20  keV
+
+
+/run/initialize
+/ESC/setCrystalMaterial G4_GALLIUM_ARSENIDE
+/run/beamOn 2 
+#/ESC/setCrystalMaterial G4_CADMIUM_TELLURIDE
+#/run/beamOn 10000
+#/ESC/setCrystalMaterial GaP
+#/run/beamOn 10000
+#/ESC/setCrystalMaterial GaSb
+#/run/beamOn 10000
+#/ESC/setCrystalMaterial PbSe
+#/run/beamOn 10000
+#/ESC/setCrystalMaterial PbTe
+#/run/beamOn 10000
+#/ESC/setCrystalMaterial BiTe3
+#/run/beamOn 10000
+#/ESC/setCrystalMaterial InSb
+#/run/beamOn 10000
+#/ESC/setCrystalMaterial CdSe
+#/run/beamOn 10000
+#/ESC/setCrystalMaterial Lu2SiO5
+#/run/beamOn 10000
+#/ESC/setCrystalMaterial Bi12SiO20
+#/run/beamOn 10000
+#/ESC/setCrystalMaterial UO2
+#/run/beamOn 10000
+#/ESC/setCrystalMaterial Bi4Ge3O12
+#/run/beamOn 10000

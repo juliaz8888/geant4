@@ -1,0 +1,40 @@
+
+#/control/verbose 2
+#/control/saveHistory
+#/run/verbose 2
+#
+# Change the default number of threads (in multi-threaded mode)
+#/run/numberOfThreads 1
+#
+# Initialize kernel
+/process/verbose 0
+#/process/em/deexcitation region true true true
+/process/em/fluo true
+/process/em/auger true
+/process/em/pixe true
+/process/em/deexcitationIgnoreCut true
+/cuts/setLowEdge 250 eV  
+/run/setCut  0.01 mm
+#/process/em/lowestElectronEnergy 10 eV
+/process/em/pixeElecXSmodel Penelope
+/process/em/pixeXSmodel ECPSSR_FormFactor
+	
+/run/initialize
+
+#
+# Visualization setting
+#/control/execute vis.mac
+/vis/open OGL 1200x1200-0+0
+/vis/viewer/set/autoRefresh false
+/vis/verbose errors
+/vis/drawVolume
+
+/vis/viewer/set/viewpointThetaPhi 90. 180.
+
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 1
+/vis/scene/endOfEventAction accumulate -1
+/vis/viewer/set/autoRefresh true
+/vis/verbose warnings
